@@ -3,6 +3,7 @@ from devtools import debug
 import os
 import time
 import pynmea2
+import sys
 
 def main(av: list[str]) -> int:
   if len(av) != 2:
@@ -14,7 +15,8 @@ def main(av: list[str]) -> int:
       try:
         line_str = line.decode("utf8")
         msg = pynmea2.parse(line_str)
-        debug(time.time(), line_str, msg)
+        # debug(time.time(), line_str, msg)
+        print(line_str.strip())
       except pynmea2.ParseError as exc:
         debug(time.time(), exc)
         continue
