@@ -1,0 +1,3 @@
+[submodule "dc32-ics-ais"]
+	path = dc32-ics-ais
+	url = https://github.com/liberasinc/dc32-ics-ais
